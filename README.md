@@ -53,13 +53,13 @@ All models are evaluated using:
 
 > ⚠️ The dataset is **not included** in this repo. Download it from the link below and place it in the project directory as `Telco_Churn.csv`.
 
-**📥 Dataset:** [Telco_customer_churn — Google Sheets](https://docs.google.com/spreadsheets/d/1XDsNlblWwx-AHK7bbcIOkcpQEEv_KZtO/edit?gid=2019077878)
+**👁️ View Dataset:** [Telco_customer_churn — Google Sheets](https://docs.google.com/spreadsheets/d/1XDsNlblWwx-AHK7bbcIOkcpQEEv_KZtO/edit?gid=2019077878)
 
 The dataset is originally from **IBM Cognos Analytics** sample data. It contains customer demographics, account details, and service usage for a fictional telecommunications company.
 
 | Property | Value |
 |---|---|
-| File | `Telco_customer_churn.xlsx` → save as `Telco_Churn.csv` |
+| File | `Telco_customer_churn.xlsx` |
 | Rows | ~7,000 customers |
 | Columns | 33 features |
 | Target variable | `Churn Value` (0 = No Churn, 1 = Churned) |
@@ -102,17 +102,15 @@ cd <repo-name>
 pip install pandas numpy matplotlib seaborn scikit-learn torch
 ```
 
-### 3. Download the dataset
+### 3. Dataset
 
-1. Open the [dataset link](https://docs.google.com/spreadsheets/d/1XDsNlblWwx-AHK7bbcIOkcpQEEv_KZtO/edit?gid=2019077878)
-2. Go to **File → Download → Comma Separated Values (.csv)**
-3. Rename the downloaded file to `Telco_Churn.csv`
-4. Place it in the same folder as the notebook (or `/content/` if using Colab)
+The dataset used in this project can be viewed here:
+👉 [View Dataset — Google Sheets](https://docs.google.com/spreadsheets/d/1XDsNlblWwx-AHK7bbcIOkcpQEEv_KZtO/edit?gid=2019077878)
 
-Update the path in the notebook if needed:
+> The dataset is view-only. Update the notebook path to point to your own copy of `Telco_Churn.csv` if running locally.
 
 ```python
-df = pd.read_csv("Telco_Churn.csv")  # local / Colab path
+df = pd.read_csv("Telco_Churn.csv")  # update path as needed
 ```
 
 ### 4. Run the notebook
