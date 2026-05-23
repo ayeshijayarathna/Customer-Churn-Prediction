@@ -51,9 +51,21 @@ All models are evaluated using:
 
 ## 📁 Dataset — `Telco_Churn.csv`
 
-**Target variable:** `Churn Value` (0 = No Churn, 1 = Churned)
+> ⚠️ The dataset is **not included** in this repo. Download it from the link below and place it in the project directory as `Telco_Churn.csv`.
 
-**Dropped columns:** `Churn Reason`, `CustomerID`, `Country`, `State`, `City`, `Zip Code`, `Lat Long`
+**📥 Dataset:** [Telco_customer_churn — Google Sheets](https://docs.google.com/spreadsheets/d/1XDsNlblWwx-AHK7bbcIOkcpQEEv_KZtO/edit?gid=2019077878)
+
+The dataset is originally from **IBM Cognos Analytics** sample data. It contains customer demographics, account details, and service usage for a fictional telecommunications company.
+
+| Property | Value |
+|---|---|
+| File | `Telco_customer_churn.xlsx` → save as `Telco_Churn.csv` |
+| Rows | ~7,000 customers |
+| Columns | 33 features |
+| Target variable | `Churn Value` (0 = No Churn, 1 = Churned) |
+| Dropped columns | `Churn Reason`, `CustomerID`, `Country`, `State`, `City`, `Zip Code`, `Lat Long` |
+
+**Key columns:** `Gender`, `Senior Citizen`, `Tenure Months`, `Phone Service`, `Internet Service`, `Contract`, `Monthly Charges`, `Total Charges`, `Churn Score`, `CLTV`
 
 **Preprocessing steps:**
 - Label encoding for all categorical columns
@@ -90,12 +102,17 @@ cd <repo-name>
 pip install pandas numpy matplotlib seaborn scikit-learn torch
 ```
 
-### 3. Add the dataset
+### 3. Download the dataset
 
-Place `Telco_Churn.csv` in `/content/` (Colab) or update the path in the notebook:
+1. Open the [dataset link](https://docs.google.com/spreadsheets/d/1XDsNlblWwx-AHK7bbcIOkcpQEEv_KZtO/edit?gid=2019077878)
+2. Go to **File → Download → Comma Separated Values (.csv)**
+3. Rename the downloaded file to `Telco_Churn.csv`
+4. Place it in the same folder as the notebook (or `/content/` if using Colab)
+
+Update the path in the notebook if needed:
 
 ```python
-df = pd.read_csv("Telco_Churn.csv")
+df = pd.read_csv("Telco_Churn.csv")  # local / Colab path
 ```
 
 ### 4. Run the notebook
